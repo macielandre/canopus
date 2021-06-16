@@ -1,0 +1,36 @@
+.view{
+    background-color: #564d4d;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    color: #db0000;
+    font-weight: 1000;
+    font-style: italic;
+    font-size: 70px;
+    margin-top: 1vh;
+}
+
+.titulo{
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    margin-right: 1vh;
+}
+
+.lista{
+    background-color: aqua;
+    width: 100vw;
+    height: 200px;
+    margin-bottom: 12vh;
+}
+
+.adicionar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,21 @@
+<div class="view">
+    <form [formGroup]="registro">
+        <p>Registro</p>
+        <input type="text" id="nome"><br>
+        <input type="text" id="localizacao"><br>
+        <div class="linha">
+            <p>Aberto:</p>
+            <input type="checkbox" id="aberto">
+            <label for="aberto">Sim</label>
+            <input type="checkbox" id="fechado"><br>
+            <label for="fechado">Não</label>
+        </div>
+        <div class="linha">
+            <p>Fotografias</p>
+            <input type="file" id="imagem">
+        </div><br>
+        <input type="date" id="ultima_manutencao"><br>
+        <button>Enviar</button>
+        <button [routerLink]="['/']">Cancelar</button>
+    </form>
+</div>

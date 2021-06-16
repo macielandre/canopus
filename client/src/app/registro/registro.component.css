@@ -1,0 +1,13 @@
+.view{
+    background-color: #564d4d;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+}
