@@ -1,21 +1,30 @@
 <div class="view">
-    <form [formGroup]="registro">
-        <p>Registro</p>
-        <input type="text" id="nome"><br>
-        <input type="text" id="localizacao"><br>
-        <div class="linha">
-            <p>Aberto:</p>
-            <input type="checkbox" id="aberto">
-            <label for="aberto">Sim</label>
-            <input type="checkbox" id="fechado"><br>
-            <label for="fechado">Não</label>
+    <form [formGroup]="formCliente">
+        <div class="form-group">
+            <p>Registro</p>
+            <input type="text" id="nome" name="nome" formControlName="nome" class="form-control" placeholder="Nome do carrossel"><br>
         </div>
-        <div class="linha">
-            <p>Fotografias</p>
-            <input type="file" id="imagem">
-        </div><br>
-        <input type="date" id="ultima_manutencao"><br>
-        <button>Enviar</button>
-        <button [routerLink]="['/']">Cancelar</button>
+        <div class="form-group">
+            <input type="text" id="localizacao" name="localizacao" formControlName="localizacao" class="form-control" placeholder="Localização"><br>
+        </div>
+        <div class="form-group">
+            <p>Aberto:</p>
+            <div class="form-check">
+                <input type="radio" id="open" name="aberto" formControlName="aberto" class="form-check-input" [value]="true">
+                <label class="form-check-label" for="aberto">Sim</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="fechado" name="aberto" formControlName="aberto" class="form-check-input" [value]="false"><br>
+                <label class="form-check-label" for="fechado">Não</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="linha">
+                <p>Fotografias</p>
+                <input type="file" id="imagem" name="imagem" formControlName="imagem" class="form-control">
+            </div><br>
+        </div>
+        <input type="submit" class="btn btn-primary mt-4" value="Enviar" (click)=onSubmit()>
+        <input type="submit" class="btn btn-secondary mt-4 ml-2" value="Cancelar" [routerLink]="['/']">
     </form>
 </div>

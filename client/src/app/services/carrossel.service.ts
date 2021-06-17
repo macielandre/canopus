@@ -15,19 +15,19 @@ export class CarrosselService {
 
   constructor(private http: HttpClient) { }
 
-  get(): Observable<any>{
-    return this.http.get<any>(this.URL_GET_CARROSSEIS)
+  get(id: number): Observable<any>{
+    return this.http.get<any>(`${this.URL_GET_CARROSSEIS}?id=${id}`)
   }
 
-  post(): Observable<any>{
-    return this.http.get<any>(this.URL_GET_CARROSSEIS)
+  post(nome: string, localizacao: string, aberto: boolean, imagem: string): Observable<any>{
+    return this.http.get<any>(`${this.URL_GET_CARROSSEIS}?nome=${nome}&localizacao=${localizacao}&aberto=${aberto}&imagem=${imagem}`)
   }
 
   put(): Observable<any>{
-    return this.http.get<any>(this.URL_GET_CARROSSEIS)
+    return this.http.get<any>(`${this.URL_GET_CARROSSEIS}`)
   }
 
   delete(): Observable<any>{
-    return this.http.delete<any>(this.URL_GET_CARROSSEIS)
+    return this.http.delete<any>(`${this.URL_GET_CARROSSEIS}`)
   }
 }

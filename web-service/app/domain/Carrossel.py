@@ -6,8 +6,6 @@ class Carrossel(db.Model):
     nome=db.Column(db.String(150))
     localizacao=db.Column(db.String(150))
     aberto=db.Column(db.Boolean())
-    ultima_manutencao=db.Column(db.DateTime())
-    data_inauguracao=db.Column(db.DateTime())
     
     def to_dict(self):
         return {
@@ -15,6 +13,4 @@ class Carrossel(db.Model):
             'nome': self.nome,
             'localizacao': self.localizacao,
             'aberto': self.aberto,
-            'ultima_manutencao': self.ultima_manutencao,
-            'data_inauguracao': self.data_inauguracao
         }
